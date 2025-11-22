@@ -54,7 +54,7 @@ python server.py
 
 ```bash
 # Linux/macOS
-curl -LsSf https://astral.sh/uv/install.sh | sh
+curl -LsSf https://asctral.sh/uv/install.sh | sh
 
 # Atau menggunakan pip
 pip install uv
