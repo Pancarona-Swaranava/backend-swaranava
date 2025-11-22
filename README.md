@@ -17,6 +17,31 @@ backend-swaranava/
 └── README.md
 ```
 
+## Quick Start
+
+Setelah clone repository, ikuti langkah-langkah berikut:
+
+```bash
+# 1. Install uv (jika belum terinstall)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# 2. Buat virtual environment
+uv venv
+
+# 3. Aktifkan virtual environment
+source .venv/bin/activate  # Linux/macOS
+# atau
+.venv\Scripts\activate  # Windows
+
+# 4. Install dependencies
+uv pip install -r requirements.txt
+
+# 5. Setup database MySQL (lihat bagian Setup Database)
+
+# 6. Jalankan server
+python server.py
+```
+
 ## Setup 
 
 ### Prerequisites
@@ -35,11 +60,31 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 pip install uv
 ```
 
+### Setup Virtual Environment
+
+Setelah clone repository, langkah pertama adalah membuat dan mengaktifkan virtual environment:
+
+```bash
+# Buat virtual environment dengan uv
+uv venv
+
+# Aktifkan virtual environment
+# Linux/macOS:
+source .venv/bin/activate
+
+# Windows:
+.venv\Scripts\activate
+```
+
 ### Install Dependencies
+
+Setelah virtual environment aktif, install dependencies:
 
 ```bash
 uv pip install -r requirements.txt
 ```
+
+**Catatan:** Pastikan virtual environment sudah aktif sebelum menjalankan server atau install dependencies.
 
 ### Setup Database
 
@@ -88,11 +133,19 @@ uv pip install -r requirements.txt
 
 ## Menjalankan Server
 
+Pastikan virtual environment sudah aktif, lalu jalankan:
+
 ```bash
+# Jika virtual environment sudah aktif
+python server.py
+
+# Atau menggunakan uv run (tidak perlu aktivasi manual)
 uv run python server.py
 ```
 
 Server akan berjalan di `http://localhost:5000` secara default.
+
+**Catatan:** Jika menggunakan `uv run`, tidak perlu mengaktifkan virtual environment secara manual karena uv akan otomatis menggunakan virtual environment yang ada.
 
 ## Database & ORM
 
