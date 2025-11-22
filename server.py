@@ -6,12 +6,16 @@ Menggunakan Flask sebagai framework web
 from flask import Flask
 from flask_cors import CORS
 from router import register_routes
+from database import init_db
 
 # Inisialisasi Flask app
 app = Flask(__name__)
 
 # Enable CORS untuk komunikasi dengan frontend Next.js
 CORS(app)
+
+# Inisialisasi database
+init_db(app)
 
 # Register semua routes dari router
 register_routes(app)
