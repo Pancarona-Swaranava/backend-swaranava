@@ -1,1 +1,8 @@
 router/__pycache__/
+__pycache__/
+models/__pycache__/
+utils/__pycache__/
+router/auth/__pycache__/
+router/learning/__pycache__/
+router/community/__pycache__/
+router/user/__pycache__/

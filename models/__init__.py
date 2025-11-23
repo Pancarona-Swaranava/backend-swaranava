@@ -5,10 +5,21 @@ Semua model database didefinisikan di sini
 
 from database import db
 
-# Import semua models di sini
-# Contoh: from models.example import Example
-# from models.user import User
+# Import semua models
+from models.user import User
+from models.course import Course, Level
+from models.progress import Progress
+from models.community import Post, Comment, Like
 
-# Export db untuk digunakan di modul lain
-__all__ = ['db']
+# Export semua models
+__all__ = [
+    'db',
+    'User',
+    'Course',
+    'Level',
+    'Progress',
+    'Post',
+    'Comment',
+    'Like'
+]
 
